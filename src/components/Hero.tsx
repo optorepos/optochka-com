@@ -54,10 +54,11 @@ export default function Hero() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="#"
+              href="https://app.optochka.com/auth/login"
+              target="_blank"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              Log in <span aria-hidden="true">&rarr;</span>
+              Sign in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </nav>
@@ -98,10 +99,11 @@ export default function Hero() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="https://app.optochka.com/auth/login"
+                    target="_blank"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Sign in
                   </a>
                 </div>
               </div>
@@ -127,7 +129,11 @@ export default function Hero() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               👋🏻 We are hiring!{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+              <a
+                href="https://oneapp.ly/companies/optochka-inc"
+                className="font-semibold text-indigo-600"
+                target="_blank"
+              >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Apply now <span aria-hidden="true">&rarr;</span>
               </a>
@@ -135,7 +141,8 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Start a store on <span className="text-blue-600">Telegram</span> and sell in just a few clicks
+              Start a store on <span className="text-blue-600">Telegram</span>{' '}
+              and sell in just a few clicks
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Transform Your Telegram Channel into a Revenue-Generating Machine
@@ -147,38 +154,38 @@ export default function Hero() {
                 type="button"
               >
                 <Link href="https://app.optochka.com/auth/register">
-                Join Free for 14 Days
+                  Join Free for 14 Days
                 </Link>
               </button>
-             
+
               <button
                 className="py-4 px-9 w-full font-semibold border border-gray-300 hover:border-gray-400 rounded-xl focus:ring focus:ring-gray-50 bg-transparent hover:bg-gray-100 transition ease-in-out duration-200"
                 type="button"
               >
-                 <Link href="https://calendly.com/optochka/30min">
-                <div className="flex flex-wrap justify-center items-center -m-1">
-                  <div className="w-auto p-1">
-                    <svg
-                      width="19"
-                      height="18"
-                      viewBox="0 0 19 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.75 3.75C2.75 2.92157 3.42157 2.25 4.25 2.25H6.70943C7.03225 2.25 7.31886 2.45657 7.42094 2.76283L8.5443 6.13291C8.66233 6.48699 8.50203 6.87398 8.1682 7.0409L6.47525 7.88737C7.30194 9.72091 8.77909 11.1981 10.6126 12.0247L11.4591 10.3318C11.626 9.99796 12.013 9.83767 12.3671 9.9557L15.7372 11.0791C16.0434 11.1811 16.25 11.4677 16.25 11.7906V14.25C16.25 15.0784 15.5784 15.75 14.75 15.75H14C7.7868 15.75 2.75 10.7132 2.75 4.5V3.75Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
+                <Link href="https://calendly.com/optochka/30min">
+                  <div className="flex flex-wrap justify-center items-center -m-1">
+                    <div className="w-auto p-1">
+                      <svg
+                        width="19"
+                        height="18"
+                        viewBox="0 0 19 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.75 3.75C2.75 2.92157 3.42157 2.25 4.25 2.25H6.70943C7.03225 2.25 7.31886 2.45657 7.42094 2.76283L8.5443 6.13291C8.66233 6.48699 8.50203 6.87398 8.1682 7.0409L6.47525 7.88737C7.30194 9.72091 8.77909 11.1981 10.6126 12.0247L11.4591 10.3318C11.626 9.99796 12.013 9.83767 12.3671 9.9557L15.7372 11.0791C16.0434 11.1811 16.25 11.4677 16.25 11.7906V14.25C16.25 15.0784 15.5784 15.75 14.75 15.75H14C7.7868 15.75 2.75 10.7132 2.75 4.5V3.75Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div className="w-auto p-1">
+                      <span>Book a free call</span>
+                    </div>
                   </div>
-                  <div className="w-auto p-1">
-                    <span>Book a free call</span>
-                  </div>
-                </div>
-              </Link>
+                </Link>
               </button>
             </div>
           </div>
@@ -188,7 +195,7 @@ export default function Hero() {
           aria-hidden="true"
         >
           <div
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#0077B6] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
