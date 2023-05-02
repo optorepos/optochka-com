@@ -71,7 +71,7 @@ export default function Hero() {
                 target="_blank"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                Join 14 day Free trial
+                Join 14 day free trial
               </Link>
             </Button>
           </div>
