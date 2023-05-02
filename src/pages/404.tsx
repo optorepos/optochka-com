@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function PageNotFound() {
   return (
@@ -6,11 +7,10 @@ export default function PageNotFound() {
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">404</h1>
         <p className="mt-3 text-2xl">This page could not be found.</p>
-        <Link href="/">
-          <button className="mt-4 text-xl p-4 text-black bg-white">
-            ← Back to home
-          </button>
-        </Link>
+        <br />
+        <Button asChild>
+          <Link href="/">← Back to home</Link>
+        </Button>
       </main>
     </div>
   );

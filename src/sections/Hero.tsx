@@ -1,18 +1,20 @@
-import { useState } from 'react';
-import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState } from "react";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import logo from '@/assets/logo/logo-dark.svg';
+import logo from "@/assets/logo/logo-dark.svg";
+import { Button } from "@/components/ui/button";
 
 const navigation = [
-  { name: 'Product', href: '#product' },
-  { name: 'Features', href: '#features' },
-  { name: 'About us', href: '#about' },
-  { name: 'Pricing', href: '/price' },
+  // { name: "About us", href: "#about" },
+  // { name: "Product", href: "#product" },
+  { name: "Features", href: "#features" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Careers", href: "https://oneapp.ly/companies/optochka-inc" },
 ];
 
 export default function Hero() {
@@ -52,14 +54,26 @@ export default function Hero() {
               </Link>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="https://app.optochka.com/auth/login"
-              target="_blank"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Sign in <span aria-hidden="true">&rarr;</span>
-            </a>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
+            <Button asChild variant="outline">
+              <Link
+                href="https://app.optochka.com/auth/login"
+                target="_blank"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Sign in
+              </Link>
+            </Button>
+
+            <Button asChild>
+              <Link
+                href="https://app.optochka.com/auth/register"
+                target="_blank"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Join 14 day Free trial
+              </Link>
+            </Button>
           </div>
         </nav>
         <Dialog
@@ -121,12 +135,12 @@ export default function Hero() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#0077B6] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+          {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               👋🏻 We are hiring!{' '}
               <a
@@ -138,10 +152,10 @@ export default function Hero() {
                 Apply now <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Start a store on <span className="text-blue-600">Telegram</span>{' '}
+              Start a store on <span className="text-blue-600">Telegram</span>{" "}
               and sell in just a few clicks
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -175,15 +189,13 @@ export default function Hero() {
                         <path
                           d="M2.75 3.75C2.75 2.92157 3.42157 2.25 4.25 2.25H6.70943C7.03225 2.25 7.31886 2.45657 7.42094 2.76283L8.5443 6.13291C8.66233 6.48699 8.50203 6.87398 8.1682 7.0409L6.47525 7.88737C7.30194 9.72091 8.77909 11.1981 10.6126 12.0247L11.4591 10.3318C11.626 9.99796 12.013 9.83767 12.3671 9.9557L15.7372 11.0791C16.0434 11.1811 16.25 11.4677 16.25 11.7906V14.25C16.25 15.0784 15.5784 15.75 14.75 15.75H14C7.7868 15.75 2.75 10.7132 2.75 4.5V3.75Z"
                           stroke="black"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                     </div>
-                    <div className="w-auto p-1">
-                      <span>Book a free call</span>
-                    </div>
+                    <div>Book a free call</div>
                   </div>
                 </Link>
               </button>
@@ -198,7 +210,7 @@ export default function Hero() {
             className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#0077B6] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
           />
         </div>
